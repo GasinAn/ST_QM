@@ -1,0 +1,57 @@
+\chapter{自伴算符}
+
+\def\H{\mathcal{H}}
+
+\begin{definition}
+    对算符$\hat{A}: D_{\hat{A}}\subset\H\to\H$, 若$\overline{{D}_{\hat{A}}}=\H$, 则称$\hat{A}$为稠定算符.
+\end{definition}
+
+\begin{theorem}
+    若$\hat{A}: D_{\hat{A}}\subset\H\to\H$是线性算符, $|\alpha\rangle\in\H$则当且仅当$\hat{A}$为稠定算符, 满足$\forall|\beta\rangle\in D_{\hat{A}}$,
+    \begin{equation*}
+        \langle\alpha|(\hat{A}|\beta\rangle)=\langle\gamma|\beta\rangle
+    \end{equation*}
+    的$|\gamma\rangle\in\H$是唯一的.
+\end{theorem}
+
+\begin{definition}
+    对稠定线性算符$\hat{A}: D_{\hat{A}}\subset\H\to\H$, 若$\hat{A}^{\dagger} : D_{\hat{A}^{\dagger}}\subset\H\to\H, |\alpha\rangle\mapsto \hat{A}^{\dagger}|\alpha\rangle$满足$\forall|\beta\rangle\in\H$,
+    \begin{equation*}
+        \langle\alpha|(\hat{A}|\beta\rangle)=(\langle\alpha|\hat{A}^{\dagger})|\beta\rangle
+    \end{equation*}
+    则称$\hat{A}^{\dagger}$为$\hat{A}$的伴随算符. 若$\hat{A}^{\dagger}=\hat{A}$, 则称$\hat{A}$为自伴算符.
+\end{definition}
+
+\begin{definition}
+    对稠定线性算符$\hat{A}: D_{\hat{A}}\subset\H\to\H$, 若$\forall|\alpha\rangle, |\beta\rangle\in\H$,
+    \begin{equation*}
+        \langle\alpha|(\hat{A}|\beta\rangle)=(\langle\alpha|\hat{A})|\beta\rangle
+    \end{equation*}
+    则称$\hat{A}$为Hermitean算符.
+\end{definition}
+
+\begin{definition}
+    对算符$\hat{A}: D_{\hat{A}}\subset\H\to\H$, $\hat{B}: D_{\hat{B}}\subset\H\to\H$, 
+    \begin{enumerate}
+        \item 若$D_{\hat{A}}=D_{\hat{B}}$, 且$\forall|\varphi\rangle\in D_{\hat{A}}$, $\hat{A}|\varphi\rangle=\hat{B}|\varphi\rangle$, 则称$\hat{A}$与$\hat{B}$相等, 并记作$\hat{A}=\hat{B}$;
+        \item 若$D_{\hat{A}}\subset D_{\hat{B}}$, 且$\forall|\varphi\rangle\in D_{\hat{A}}$, $\hat{A}|\varphi\rangle=\hat{B}|\varphi\rangle$, 则称$\hat{A}$是$\hat{B}$的限制, $\hat{B}$是$\hat{A}$的延拓, 并记作$\hat{A}\subset\hat{B}$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+    若$\hat{A}: D_{\hat{A}}\subset\H\to\H$为稠定线性算符, 则当且仅当$\hat{A}\subset \hat{A}^{\dagger}$, $\hat{A}$为Hermitean算符.
+\end{definition}
+
+\begin{definition}
+    对线性算符$\hat{A}: D_{\hat{A}}\subset\H\to\H$, 若$\exists M\in\mathbb{R} $, 使得$\forall|\varphi\rangle\in D_{\hat{A}}$,
+    \begin{equation*}
+        \lVert \hat{A}|\varphi\rangle\rVert 
+        \le
+        M \lVert |\varphi\rangle\rVert,
+    \end{equation*}
+    则称$\hat{A}$为有界算符, 否则称$\hat{A}$为无界算符.
+\end{definition}
+
+\begin{definition}
+    若$\hat{A}: D_{\hat{A}}\subset\H\to\H$为有界Hermitean算符, 则$\hat{A}$为自伴算符.
+\end{definition}
