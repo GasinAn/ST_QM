@@ -1,0 +1,69 @@
+\chapter{Hilbert空间}
+
+\section{定义和基本性质}
+
+\begin{definition}
+    完备的内积空间称为Hilbert空间.
+\end{definition}
+\begin{theorem}
+    Hilbert空间是可分的, 当且仅当其有可数正交归一基.
+\end{theorem}
+任意可分Hilbert空间同构于$\ell^2$和$L^2$. 以下只讨论可分Hilbert空间.
+
+\begin{definition}
+    序列$\{|f_n\ra\}$称为强收敛于$|f\ra$, 若$\{\left\lVert|f_n\ra-|f\ra\right\rVert\}$在$n\to\infty$时收敛于$0$.
+\end{definition}
+\begin{definition}
+    序列$\{|f_n\ra\}$称为弱收敛于$|f\ra$, 若$\forall|g\ra$, $\{\la g|f_n\ra\}$在$n\to\infty$时收敛于$\la g|f\ra$.
+\end{definition}
+可称强收敛为依范数收敛, 弱收敛为依分量收敛.
+
+\section{矢量值函数}
+
+用强收敛可定义任意矢量值函数$|f(\cdot)\ra:\,I\in\R\to\H$的强连续性, 强可微性和强Riemann可积性.
+
+\section{Hilbert空间的子集}
+
+\begin{definition}
+    若$U$是Hilbert空间$\H$的子集, $U$的闭包$\overline{U}=\H$, 则$U$称为稠密的.
+\end{definition}
+\begin{definition}
+    若$M$是Hilbert空间$\H$的子集, $M$对$\H$的线性运算封闭, 则$M$称为线性流形.
+\end{definition}
+\begin{definition}
+    若$N$是Hilbert空间$\H$的子集, 则$\H$中所有能表示为$N$中有限个元素的线性叠加的矢量组成的集合是一个线性流形, 称为由$N$生成的线性流形.
+\end{definition}
+\begin{definition}
+    若$N$是Hilbert空间$\H$的子集, 由$N$生成的线性流形是稠密的, 则$N$称为完全的.
+\end{definition}
+\begin{definition}
+    若$M$是Hilbert空间$\H$的子集, $M$是完备线性流形, 则$M$称为子空间.
+\end{definition}
+\begin{definition}
+    若$N$是Hilbert空间$\H$的子集, 则由$N$生成的线性流形的闭包$M_N$是一个子空间, 称为由$N$生成的子空间.
+\end{definition}
+\begin{definition}
+    若$U$是Hilbert空间$\H$的子集, 则$U^{\perp}:=\{|f\ra\in\H\,|\,|f\ra\perp|g\ra,\,\forall|g\ra\in U\}$称为$U$的正交补.
+\end{definition}
+\begin{theorem}
+    若$U$是Hilbert空间$\H$的子集, 则$U^{\perp}$为子空间, $U^{\perp\perp}$为由$N$生成的子空间.
+\end{theorem}
+\begin{theorem}
+    若$M$是子空间, 则$\forall$$|f\ra\in\H$, $\exists$$|f\ra\text{的唯一分解}|f\ra=|f_{\text{T}}\ra+|f_{\text{N}}\ra,\,|f_{\text{T}}\ra\in M,\,|f_{\text{N}}\ra\in M^{\perp}$.
+\end{theorem}
+\begin{definition}
+    若$\{\H_1,\ldots,\H_n\}$中的元素都是Hilbert空间, 则$\{\H_1,\ldots,\H_n\}$中的元素的正交和$\bigoplus_{i=1}^n\H_i$为一个Hilbert空间, 其元素形如$|f_1\ra\ldots|f_n\ra,\,f_i\in\H_i,\,\forall i\in\{1,\ldots,n\}$, 满足
+    \begin{equation*}
+        (\la f_n|\ldots\la f_1|)(|g_1\ra\ldots|g_n\ra)=\sum_{i=1}^n\H_i\la f_i|g_i\ra,\,\forall|f_1\ra\ldots|f_n\ra,\,|g_1\ra\ldots|g_n\ra\in\bigoplus_{i=1}^n\H_i.
+    \end{equation*}
+\end{definition}
+\begin{definition}
+    若$\{\H_i|i\in\mathbb{N}\}$中的元素都是Hilbert空间, 则$\{\H_i|i\in\mathbb{N}\}$中的元素的正交和$\bigoplus_{i=1}^\infty\H_i$为一个Hilbert空间, 其元素形如$|f_1\ra\ldots|f_i\ra\ldots,\,f_i\in\H_i,\,\forall i\in\mathbb{N}$, 满足
+    \begin{equation*}
+        (\ldots\la f_i|\ldots\la f_1|)(|g_1\ra\ldots|g_i\ra\ldots)=\sum_{i=1}^\infty\H_i\la f_i|g_i\ra,\,\forall|f_1\ra\ldots|f_i\ra\ldots,\,|g_1\ra\ldots|g_i\ra\ldots\in\bigoplus_{i=1}^n\H_i.
+    \end{equation*}
+\end{definition}
+
+\section{测度和积分}
+
+测度和Lebesgue积分的内容参见\href{https://github.com/GasinAn/PRNotes}{https://github.com/GasinAn/PRNotes}.
