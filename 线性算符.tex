@@ -1,0 +1,219 @@
+\chapter{线性算符}
+
+\section{代数$\BH$}
+
+\begin{definition}
+    $\H$上所有有界线性算符组成的集合称为$\BH$.
+\end{definition}
+\begin{definition}
+    $\forall\hat{A}\in\BH$, $\hat{A}$的范数
+    \begin{equation*}
+        \lVert\hat{A}\rVert:=\inf\left\{M\in\R\,\bigg|\,\lVert\hat{A}|f\ra\rVert\le M|f\ra,\,\forall|f\ra\in\H\right\}=\sup_{|g\ra\in\H,\,\lVert|g\ra\rVert=1}{\lVert\hat{A}|g\ra\rVert}.
+    \end{equation*}
+\end{definition}
+\begin{theorem}
+    $\BH$是完备的.
+\end{theorem}
+
+\begin{definition}
+    $\forall\hat{A}\in\BH$, $\hat{A}^{\dagger}$称为$\hat{A}$的伴随, 若$(\la f|\hat{A}^{\dagger})|g\ra=\la f|(\hat{A}|g\ra)$, $\forall|f\ra,\,|g\ra\in\H$.
+\end{definition}
+\begin{definition}
+    $\forall\hat{A}\in\BH$, $\hat{A}$称为自伴的, 若$\hat{A}^{\dagger}=\hat{A}$.
+\end{definition}
+
+\begin{definition}
+    序列$\{\hat{A}_n\}$称为强收敛于$\hat{A}$, 若$\forall|f\ra\in\H$, $\{\hat{A}_n|f\ra\}$强收敛于$\hat{A}|f\ra$.
+\end{definition}
+\begin{definition}
+    序列$\{\hat{A}_n\}$称为弱收敛于$\hat{A}$, 若$\forall|f\ra\in\H$, $\{\hat{A}_n|f\ra\}$弱收敛于$\hat{A}|f\ra$.
+\end{definition}
+\begin{definition}
+    序列$\{\hat{A}_n\}$称为一致收敛于$\hat{A}$, 若$\{\lVert\hat{A}_n-\hat{A}\rVert\}$在$n\to\infty$时收敛于$0$.
+\end{definition}
+可称强收敛为依矢量范数收敛, 弱收敛为依矢量分量收敛, 一致收敛为依范数收敛.
+
+\section{投影算符和等距算符}
+
+\begin{definition}
+    $\hat{P}\in\BH$称为投影算符, 若$\hat{P}$自伴, 且$\hat{P}^2=\hat{P}$.
+\end{definition}
+\begin{theorem}
+    若$\hat{P}\in\BH$是投影算符, 则$\exists\text{子空间}M=\{|f\ra\in\H\,|\,\hat{P}|f\ra=|f\ra\}$, 使得$\hat{P}=\hat{P}_M$.
+\end{theorem}
+\begin{theorem}
+    若投影算符序列$\{\hat{P}_n\}$强收敛于$\hat{P}$, 则$\hat{P}$是投影算符.
+\end{theorem}
+
+\begin{definition}
+    $\hat{\Omega}\in\BH$称为半等距算符, 若$\hat{\Omega}^{\dagger}\hat{\Omega}=\hat{P}$为投影.
+\end{definition}
+\begin{definition}
+    $\hat{\Omega}\in\BH$称为等距算符, 若$\hat{\Omega}^{\dagger}\hat{\Omega}=\hat{I}$.
+\end{definition}
+\begin{definition}
+    $\hat{U}\in\BH$称为幺正算符, 若$\hat{U}^{\dagger}\hat{U}=\hat{I}=\hat{U}\hat{U}^{\dagger}$.
+\end{definition}
+
+\section{紧算符}
+
+\begin{definition}
+    算符$\hat{A}$称为有限秩算符, 若$\hat{A}$能表示成$\hat{A}=\sum_{i=1}^n{|h_i\ra\la g|}$.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$为有限秩算符, 则$\hat{A}\in\BH$
+\end{theorem}
+\begin{theorem}
+    若$\dim R_{\hat{A}}<\infty$, 则$\hat{A}$为有限秩算符.
+\end{theorem}
+\begin{definition}
+    算符$\hat{A}\in\BH$称为紧算符, 若$\exists\text{有限秩算符序列}\{\hat{A}_n\}$, $\{\hat{A}_n\}$一致收敛于$\hat{A}$.
+\end{definition}
+\begin{definition}
+    $\H$上所有紧算符组成的集合称为$\KH$.
+\end{definition}
+\begin{theorem}
+    $\hat{P}_M\in\KH$, 当且仅当$\dim M<\infty$.
+\end{theorem}
+\begin{definition}
+    $\forall\hat{A}\in\BH$, $\hat{A}$的Hilbert-Schmidt范数
+    \begin{equation*}
+        \lVert\hat{A}\rVert_\text{HS}:=\left[\sum_i\lVert\hat{A}|e_i\ra\rVert^2\right]^{1/2},
+    \end{equation*}
+    其中${|e_i\ra}$是$\H$的一组正交归一基.
+\end{definition}
+\begin{definition}
+    算符$\hat{A}\in\BH$称为Hilbert-Schmidt算符, 若$\lVert\hat{A}\rVert_\text{HS}<\infty$.
+\end{definition}
+\begin{definition}
+    $\H$上所有Hilbert-Schmidt算符组成的集合称为$\BtwoH$.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$为Hilbert-Schmidt算符, 则$\hat{A}$为紧算符.
+\end{theorem}
+
+\section{无界算符}
+
+\begin{definition}
+    算符$\hat{A}$称为线性算符, 若$D_{\hat{A}}$是线性流形且$\hat{A}$线性.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$是线性算符, 则$N_{\hat{A}}:=\{|f\ra\in D_{\hat{A}}\,|\,\hat{A}|f\ra=|0\ra\}$称为$\hat{A}$的零空间.
+\end{definition}
+\begin{definition}
+    对算符$\hat{A}$, $\hat{B}$, 
+    \begin{enumerate}
+        \item 若$D_{\hat{A}}=D_{\hat{B}}$, 且$\forall|f\ra\in D_{\hat{A}}$, $\hat{A}|f\ra=\hat{B}|f\ra$, 则称$\hat{A}$与$\hat{B}$相等, 并记作$\hat{A}=\hat{B}$;
+        \item 若$D_{\hat{A}}\subset D_{\hat{B}}$, 且$\forall|f\ra\in D_{\hat{A}}$, $\hat{A}|f\ra=\hat{B}|f\ra$, 则称$\hat{A}$是$\hat{B}$的限制, $\hat{B}$是$\hat{A}$的延拓, 并记作$\hat{A}\subset\hat{B}$.
+    \end{enumerate}
+\end{definition}
+\begin{definition}
+    算符$\hat{A}$称为可闭算符, 若$D_{\hat{A}}$中序列$\{|f_n\ra\}$强收敛于$|0\ra$且序列$\{|\hat{A}f_n\ra\}$是强Cauchy序列时, $\{|\hat{A}f_n\ra\}$强收敛于$|0\ra$.
+\end{definition}
+\begin{definition}
+    算符$\hat{A}$称为闭算符, 若$D_{\hat{A}}$中序列$\{|f_n\ra\}$强收敛于$|f\ra$且序列$\{|\hat{A}f_n\ra\}$是强Cauchy序列时, $|f\ra\in D_{\hat{A}}$且$\{|\hat{A}f_n\ra\}$强收敛于$|f\ra$.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$为闭算符, 则$N_{\hat{A}}$为子空间.
+\end{theorem}
+\begin{theorem}
+    $\hat{A}$可逆, 当且仅当$N_{\hat{A}}=\{|0\ra\}$.
+\end{theorem}
+
+
+\begin{definition}
+    算符$\hat{A}$称为稠定算符, 若$D_{\hat{A}}$是稠密的.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$是有界算符, 则存在$\hat{A}$的由$D_{\hat{A}}$到$\overline{D_{\hat{A}}}$的自然延拓, 称为$\hat{A}$的闭包, 记作$\overline{\hat{A}}$.
+\end{definition}
+\begin{definition}
+    算符$\hat{A}^{\dagger}$称为稠定算符$\hat{A}$的伴随, 若$D_{\hat{A}^{\dagger}}=\{|f\ra\in\H\,|\,\exists|f^{\dagger}\ra\in\H,\,\la f^{\dagger}|g\ra=\la f|(\hat{A}|g\ra),\,\forall|g\ra\in D_{\hat{A}}\}$, 且$\hat{A}^{\dagger}|f\ra=|f^{\dagger}\ra$.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$是稠定算符, 则$\hat{A}^{\dagger}$是闭算符.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$是稠定可闭算符, 则$\overline{\hat{A}}^{\dagger}=\hat{A}^{\dagger}$.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$和$\hat{A}^{\dagger}$都是稠定算符, 则$\hat{A}\subset\hat{A}^{\dagger\dagger}$.
+\end{definition}
+\begin{definition}
+    若$\hat{A}$和$\hat{A}^{\dagger}$都是稠定算符, 且$\hat{A}$是闭算符, 则$\hat{A}=\hat{A}^{\dagger\dagger}$.
+\end{definition}
+
+\begin{definition}
+    稠定算符$\hat{A}$称为自伴算符, 若$\hat{A}=\hat{A}^{\dagger}$.
+\end{definition}
+\begin{definition}
+    稠定算符$\hat{A}$称为Hermitean算符, 若$(\la f|\hat{A})|g\ra=\la f|(\hat{A}|g\ra)$, $\forall|f\ra, |g\ra\in D_{\hat{A}}$.
+\end{definition}
+\begin{theorem}
+    稠定算符$\hat{A}$是Hermitean算符, 当且仅当$\hat{A}\subset\hat{A}^{\dagger}$.
+\end{theorem}
+\begin{definition}
+    Hermitean算符$\hat{A}$称为本质自伴算符, 若$\overline{\hat{A}}$是自伴算符.
+\end{definition}
+\begin{theorem}
+    Hermitean算符$\hat{A}$是本质自伴算符, 当且仅当$\hat{A}^{\dagger}$是Hermitean算符.
+\end{theorem}
+
+\section{算符的预解和谱}
+
+\begin{definition}
+    若$\hat{A}$是闭算符, 则$\hat{A}$的预解$\text{r}(\hat{A})$定义为$\{z\in\C\,|\,\hat{A}-z\hat{I}\,\text{可逆},\,(\hat{A}-z\hat{I})^{-1}\in\BH\}$, $\hat{A}$的谱$\text{s}(\hat{A})$定义为$\H-\text{r}(\hat{A})$.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$是闭算符, 则$\text{r}(\hat{A})$是开集, $\text{s}(\hat{A})$是闭集.
+\end{theorem}
+\begin{definition}
+    $z\in\C$称为算符$\hat{A}$的本征值, 若$\hat{A}-z\hat{I}\,\text{可逆}$.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$是Hermitean算符, 则$\hat{A}$的所有本征值为实数.
+\end{theorem}
+\begin{theorem}
+    若$\hat{A}$是自伴算符, 则$\text{s}(\hat{A})\subset\R$.
+\end{theorem}
+\begin{theorem}
+    若$\hat{A}\in\BH$, 则$\text{s}(\hat{A})\subset\{z\in\C\,|\,\lvert z\rvert\le\lVert\hat{A}\rVert\}$.
+\end{theorem}
+
+\section{自伴算符的微扰}
+
+\begin{theorem}
+    若$\hat{A}$和$\hat{A}'$是Hermitean算符, $D_{\hat{A}}\cap D_{\hat{A}'}$是稠密的, 则$\hat{A}+\hat{A}'$是Hermitean算符.
+\end{theorem}
+\begin{theorem}
+    若$\hat{A}$是自伴算符, $\hat{A}'$是Hermitean算符, 且$\hat{A}'\in\BH$, 则$\hat{A}+\hat{A}'$是自伴算符.
+\end{theorem}
+\begin{definition}
+    算符$\hat{A}'$称为$\hat{A}$有界算符, 若$D_{\hat{A}}\subset D_{\hat{A}'}$且$\exists\,\alpha\ge0,\,\beta_\alpha\ge0$, $\lVert\hat{A}'|f\ra\rVert\le\alpha\lVert\hat{A}|f\ra\rVert+\beta_\alpha\lVert|f\ra\rVert,\,\forall|f\ra\in D_{\hat{A}}$, 并且$\alpha$的下确界$a$称为$\hat{A}'$的$\hat{A}$界.
+\end{definition}
+\begin{definition}
+    \begin{enumerate}
+        \item 自伴算符$\hat{A}$称为下半有界算符, 若$\exists\,\lambda\in\R$, $(-\infty,\lambda)\subset\text{r}(\hat{A})$.
+        \item 自伴算符$\hat{A}$称为上半有界算符, 若$\exists\,\lambda\in\R$, $(\lambda,\infty)\subset\text{r}(\hat{A})$.
+    \end{enumerate}
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$是自伴算符, $\hat{A}'$是$\hat{A}$有界Hermitean算符, 且$\hat{A}'$的$\hat{A}$界$a<1$, 则:
+    \begin{enumerate}
+        \item $\hat{A}+\hat{A}'$是自伴算符.
+        \item $\hat{A}'$也是$\hat{A}+\hat{A}'$有界Hermitean算符.
+        \item 若$\hat{A}$是半有界算符, 则$\hat{A}+\hat{A}'$也是半有界算符.
+        \item 若条件放宽, $\hat{A}$是本质自伴算符, 或$a\le1$, 则$\hat{A}+\hat{A}'$是本质自伴算符.
+    \end{enumerate}
+\end{theorem}
+\begin{definition}
+    当$\hat{A}$为闭算符时, 算符$\hat{B}$称为$\hat{A}$紧算符, 若$D_{\hat{A}}\subset D_{\hat{B}}$且$\exists\,z\in\text{r}(\hat{A})$, $\hat{B}(\hat{A}-z\hat{I})^{-1}$是紧算符.
+\end{definition}
+\begin{theorem}
+    若$\hat{A}$是自伴算符, $\hat{B}$是$\hat{A}$紧Hermitean算符, 则:
+    \begin{enumerate}
+        \item $\hat{B}(\hat{A}-z\hat{I})^{-1}\in\KH$, $\forall z\in\text{r}(\hat{A})$.
+        \item $\hat{B}$是$\hat{A}$有界算符, $\hat{A}$界为$0$.
+        \item 若$\hat{A}'$是$\hat{A}$有界Hermitean算符, 且$\hat{A}'$的$\hat{A}$界$a<1$, 则$\hat{B}$也是$\hat{A}+\hat{A}'$紧Hermitean算符.
+    \end{enumerate}
+\end{theorem}
