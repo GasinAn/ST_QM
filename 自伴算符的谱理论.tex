@@ -1,0 +1,53 @@
+\chapter{自伴算符的谱理论}
+
+\section{Borel-Stieltjes测度}
+
+\begin{definition}
+    若右连续单调不降实函数$F$满足$F(-\infty)=0$, 则$F$称为分布函数.
+\end{definition}
+\begin{definition}
+    若$F$为分布函数, $\mathcal{B}$为Borel集代数, 则由$F$诱导出的, 和$F$一一对应的$\sigma(\mathcal{B})$上的测度$\mu_F$称为和$F$对应的Borel-Stieltjes测度.
+\end{definition}
+
+\section{谱测度}
+
+\begin{definition}
+    若子空间族$\{M_\lambda\}$满足:
+    \begin{enumerate}
+        \item $M_{\lambda_1}\subset M_{\lambda_2}$, 若$\lambda_1\le\lambda_2$,
+        \item $\bigcap_\lambda M_\lambda=\{|0\ra\}$, $\bigcup_\lambda M_\lambda$稠密,
+    \end{enumerate}
+    则$\{M_\lambda\}$称为标准单调不降子空间族.
+\end{definition}
+\begin{definition}
+    若子空间族$\{M_\lambda\}$为标准单调不降子空间族, 则$\{\hat{E}_\lambda\}:=\{\hat{P}_{M_\lambda}\}$满足:
+    \begin{enumerate}
+        \item $\hat{E}_{\lambda_1}\hat{E}_{\lambda_2}=\hat{E}_{\min\{\lambda_1,\lambda_2\}}$,
+        \item $\lambda\to-\infty$时$\{\hat{E}_\lambda\}$的强极限为$\hat{O}$, $\lambda\to+\infty$时$\{\hat{E}_\lambda\}$的强极限为$\hat{I}$,
+    \end{enumerate}
+    $\{\hat{E}_\lambda\}$称为标准单调不降投影族, $\hat{E}_{-\infty}:=\hat{O}$, $\hat{E}_{+\infty}:=\hat{I}$.
+\end{definition}
+\begin{definition}
+    若$\{\hat{E}_\lambda\}$是标准单调不降投影族, $\{\hat{E}_\lambda\}$右连续, 即$\hat{E}_\lambda$的右强极限$\hat{E}_{\lambda+0}=\hat{E}_\lambda$, $\forall\,\lambda\in\R$, 则$\{\hat{E}_\lambda\}$称为谱族.
+\end{definition}
+\begin{definition}
+    若$\{\hat{E}_\lambda\}$是谱族, $-\infty<a<b<+\infty$, 则$\mu_{\hat{E}}((a,b]):=\hat{E}_b-\hat{E}_a$, 如此可将任意左开右闭区间$(a,b]$和一个投影$\mu_{\hat{E}}((a,b])$对应, 并进一步可以将任意Borel集$B$和一个投影$\mu_{\hat{E}}(B)$对应, 映射$\mu_{\hat{E}}$称为由谱族$\{\hat{E}_\lambda\}$生成的谱测度.
+\end{definition}
+
+\begin{definition}
+    若$\{\hat{E}_\lambda\}$是谱族, $|f\ra\in\H$, 则实函数$F_{|f\ra;\hat{E}}:\,\lambda\mapsto\lVert\hat{E}_\lambda|f\ra\rVert^2$为分布函数, 称和$F_{|f\ra;\hat{E}}$对应的Borel-Stieltjes测度$\mu_{|f\ra;\hat{E}}$为由$|f\ra$和$\{\hat{E}_\lambda\}$生成的Borel-Stieltjes测度.
+\end{definition}
+
+\begin{theorem}
+    若函数$\varphi:\,\R\to\C$连续, $\{\hat{E}_\lambda\}$是谱族, 则可定义一个Riemann积分$\int\varphi(\lambda)\,\mu_{\hat{E}}(\d\lambda)$, 此积分是定义在某稠密集$D_{\varphi;\hat{E}}$上的闭算符, 且其伴随为$\int\bar{\varphi}(\lambda)\mu_{\hat{E}}(\d\lambda)$.
+\end{theorem}
+
+\begin{definition}
+    若$\{\hat{E}_\lambda\}$是谱族, 则算符$\int\lambda\,\mu_{\hat{E}}(\d\lambda)$称为和谱族$\{\hat{E}_\lambda\}$对应的算符.
+\end{definition}
+
+\begin{theorem}
+    若$\hat{A}$是自伴算符, 则存在唯一谱族$\{\hat{E}_{\lambda;\hat{A}}\}$, 使得\begin{equation*}
+        \hat{A}=\int a\,|a\ra\la a|(\d a):=\int a\,\mu_{\hat{E}_{\hat{A}}}(\d a).
+    \end{equation*}
+\end{theorem}
